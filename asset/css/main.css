@@ -1,0 +1,167 @@
+:root {
+  --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+  --PaleBlue: hsl(243, 100%, 93%);
+  --GrayishBlue: hsl(229, 7%, 55%);
+  --DarkBlue: hsl(228, 56%, 26%);
+  --VeryDarkBlue: hsl(229, 57%, 11%);
+  --paleWhite: #ffffff;
+  /* font-size 1rem = 10px */
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(../img/bg-mobile.png);
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.wrapper {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 667px;
+  justify-content: center;
+}
+
+/* -----------File----------------------- */
+.file {
+  background: var(--DarkBlue);
+  border-radius: 1rem;
+  border-start-end-radius: 10rem;
+  color: var(--paleWhite);
+  height: 190px;
+  margin-bottom: 2rem;
+}
+
+.file .file-title {
+  margin: 4rem 0rem 3rem 4rem;
+  width: 250px;
+}
+
+.file .file-icons {
+  /* border: 1px solid; */
+  display: flex;
+  height: 40px;
+  justify-content: space-around;
+  margin: 0rem 0 0 4rem;
+  width: 170px;
+}
+
+.file .file-icons .icon {
+  background: var(--VeryDarkBlue);
+  border-radius: 0.5rem;
+  /* border: 1px solid red; */
+  position: relative;
+  width: 40px;
+}
+
+.file .file-icons .icon:hover {
+  transform: scale(1.2);
+}
+
+.file-icons .icon img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*------------ Information -----------------*/
+.information {
+  align-items: center;
+  background: var(--DarkBlue);
+  border-radius: 1rem;
+  color: var(--paleWhite);
+  display: flex;
+  flex-direction: column;
+  height: 170px;
+  text-align: center;
+  /* border: 1px solid white; */
+}
+
+.information p {
+  /* border: 1px solid; */
+  margin-bottom: 1.5rem;
+  margin-top: 4rem;
+}
+
+.information .progress {
+  background: var(--VeryDarkBlue);
+  border-radius: 2rem;
+  /* border: 1px solid rgb(192, 18, 18); */
+  height: 20px;
+  width: 250px;
+}
+
+.information .progress .progress-bar {
+  background: rgb(255, 163, 153);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 163, 153, 1) 47%,
+    rgba(255, 77, 151, 0.9360119047619048) 78%
+  );
+  border-radius: 2rem;
+  height: 14px;
+  bottom: 2px;
+  left: 3px;
+  top: 3px;
+  position: relative;
+  width: 185px;
+}
+
+.information .progress .progress-bar:hover {
+  transform: translate(55px);
+  transition: 3s ease-in-out;
+}
+
+.progress .progress-bar span {
+  background: var(--PaleBlue);
+  border-radius: 50%;
+  height: 12px;
+  position: absolute;
+  right: -0.5rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+}
+
+.information .capacity {
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+/* capacity-left */
+.capacity-left {
+  align-items: center;
+  background: var(--paleWhite);
+  border-radius: 1rem;
+  display: flex;
+  height: 60px;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  position: relative;
+  top: -35px;
+  width: 150px;
+}
+
+.capacity-left .number {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.capacity-left .text {
+  color: var(--GrayishBlue);
+  font-size: 1rem;
+  font-weight: 700;
+}
