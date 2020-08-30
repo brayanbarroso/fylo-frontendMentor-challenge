@@ -19,17 +19,14 @@ body {
   padding: 0;
 }
 
-main {
-  margin: 0 auto;
-  width: 90%;
-}
-
 .wrapper {
   align-content: center;
   display: flex;
   flex-direction: column;
   height: 667px;
   justify-content: center;
+  margin: 0 auto;
+  width: 90%;
 }
 
 /* -----------File----------------------- */
@@ -80,10 +77,12 @@ main {
   align-items: center;
   background: var(--DarkBlue);
   border-radius: 1rem;
+  box-sizing: border-box;
   color: var(--paleWhite);
   display: flex;
   flex-direction: column;
   height: 170px;
+  position: relative;
   text-align: center;
   /* border: 1px solid white; */
 }
@@ -97,6 +96,7 @@ main {
 .information .progress {
   background: var(--VeryDarkBlue);
   border-radius: 2rem;
+  box-sizing: border-box;
   /* border: 1px solid rgb(192, 18, 18); */
   height: 20px;
   width: 250px;
@@ -146,22 +146,99 @@ main {
   align-items: center;
   background: var(--paleWhite);
   border-radius: 1rem;
+  bottom: -25px;
   display: flex;
   height: 60px;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 0 auto;
-  position: relative;
-  top: -35px;
+  position: absolute;
   width: 150px;
 }
 
 .capacity-left .number {
+  color: black;
   font-size: 3rem;
   font-weight: 700;
+  margin-right: 1rem;
 }
 
 .capacity-left .text {
   color: var(--GrayishBlue);
   font-size: 1rem;
   font-weight: 700;
+}
+
+/*------------attribution---------------  */
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 12px;
+}
+
+.attribution a {
+  color: #dddbff;
+}
+
+/* Media query desktop */
+@media only screen and (min-width: 960px) {
+  body {
+    background: var(--VeryDarkBlue);
+    background-image: url(../img/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+  }
+
+  .wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  /* --------file-------------------- */
+  .file {
+    height: 190px;
+    margin-left: 7rem;
+    margin-top: 20px;
+    margin-right: 2rem;
+    width: 350px;
+  }
+
+  /* --------information -------------*/
+  .information {
+    height: 150px;
+    margin-top: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    position: relative;
+    text-align: left;
+    width: 500px;
+  }
+
+  .information .progress {
+    width: 450px;
+  }
+
+  .information .progress .progress-bar {
+    width: 350px;
+  }
+
+  /* capacity-left */
+  .capacity-left {
+    display: flex;
+    height: 74px;
+    position: absolute;
+    top: -40px;
+    right: 30px;
+    width: 180px;
+  }
+
+  .triangle::after {
+    border-left: 30px solid transparent;
+    border-top: 30px solid var(--paleWhite);
+    bottom: -15px;
+    content: "";
+    position: absolute;
+    right: 0;
+  }
 }
