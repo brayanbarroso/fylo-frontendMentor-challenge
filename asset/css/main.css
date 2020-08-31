@@ -33,7 +33,7 @@ body {
 .file {
   background: var(--DarkBlue);
   border-radius: 1rem;
-  border-start-end-radius: 10rem;
+  border-top-right-radius: 10rem;
   color: var(--paleWhite);
   height: 190px;
   margin-bottom: 2rem;
@@ -169,10 +169,19 @@ body {
 }
 
 /*------------attribution---------------  */
+footer {
+  position: relative;
+}
 .attribution {
   position: absolute;
   bottom: 1rem;
   font-size: 12px;
+  width: 90%;
+}
+
+.attribution p {
+  color: var(--GrayishBlue);
+  text-align: center;
 }
 
 .attribution a {
